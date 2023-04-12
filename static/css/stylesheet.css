@@ -1,0 +1,145 @@
+/* -------------------------------- Variables Start -------------------------------- */
+
+:root{
+    --main--bg--color: #F6F1F1;
+    --main--text--color:#000000;
+    --main--shadow--color:#0000007a;
+    --light--blue:#19A7CE;
+    --light--darl--blue:#146C94;
+    --transition--duration:0.3s;
+}
+
+/* -------------------------------- Variables End -------------------------------- */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+body{
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+.container{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.content-wrap{
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 500px;
+    padding: 25px 0;
+}
+
+.content-wrap>.content{
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer{
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: var(--main--bg--color);
+    box-shadow: 0px 0px 5px 1px var(--main--shadow--color);
+}
+
+.footer .copyright{
+    background: var(--main--bg--color);
+    font-weight: 300;
+    font: 22px;
+}
+
+.navbar{
+    display: flex;
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 0 25px;
+    background: var(--main--bg--color);
+    box-shadow: 0px 0px 5px 1px var(--main--shadow--color);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main--text--color);
+    transition-duration: var(--transition--duration);
+}
+
+.navbar ul li a:hover{
+    color: var(--light--blue);
+    transition-duration: var(--transition--duration);
+}
+
+.navbar ul li a.active{
+    color: var(--light--darl--blue);
+}
+
+.logo_div{
+    display: block;
+    float: left;
+    width: auto;
+}
+
+.logo_div>a{
+    color: var(--main--text--color);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo_div h1{
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 3px;
+    transition-duration: var(--transition--duration);
+}
+
+.logo_div h1:hover{
+    color: var(--light--blue);
+    transition-duration: var(--transition--duration);
+}

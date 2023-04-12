@@ -1,0 +1,6 @@
+echo - 
+require_once - 
+mysqli_query - 
+mysqli_fetch_all - 
+array_push - 
+mysqli_fetch_assoc - 
