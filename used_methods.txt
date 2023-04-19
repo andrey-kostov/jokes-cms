@@ -1,6 +1,21 @@
+array_push - 
+
 echo - 
+esc -
+
 require_once - 
+
 mysqli_query - 
 mysqli_fetch_all - 
-array_push - 
 mysqli_fetch_assoc - 
+mysqli_real_escape_string - 
+md5 - 
+
+in_array -
+isset - 
+
+trim - 
+
+session_start -
+session_unset -
+session_destroy -

@@ -5,11 +5,15 @@ function getPublishedPosts() {
 	global $conn;
 	$sql = "SELECT * FROM posts WHERE published=true";
 	$result = mysqli_query($conn, $sql);
-
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-	return $posts;
+	$final_posts = array();
+	foreach ($posts as $post) {
+		$post['topic'] = getPostTopic($post['id']); 
+		array_push($final_posts, $post);
+	}
+	return $final_posts;
 }
 
 function getPostTopic($post_id){
@@ -47,6 +51,31 @@ function getTopicNameById($id)
 	$result = mysqli_query($conn, $sql);
 	$topic = mysqli_fetch_assoc($result);
 	return $topic['name'];
+}
+
+function getPost($slug){
+	global $conn;
+	// Get single post slug
+	$post_slug = $_GET['post-slug'];
+	$sql = "SELECT * FROM posts WHERE slug='$post_slug' AND published=true";
+	$result = mysqli_query($conn, $sql);
+
+	// fetch query results as associative array.
+	$post = mysqli_fetch_assoc($result);
+	if ($post) {
+		// get the topic to which this post belongs
+		$post['topic'] = getPostTopic($post['id']);
+	}
+	return $post;
+}
+
+function getAllTopics()
+{
+	global $conn;
+	$sql = "SELECT * FROM topics";
+	$result = mysqli_query($conn, $sql);
+	$topics = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	return $topics;
 }
 
 ?>

@@ -14,6 +14,11 @@
 			  	</a>
 			</li>
 			<li>
+				<a href="<?php echo BASE_URL . 'register.php'?>">
+					<?php echo $text_navbar_link_5; ?>
+			  	</a>
+			</li>
+			<li>
 				<a href="#news">
 					<?php echo $text_navbar_link_2; ?>
 			  	</a>
