@@ -1,7 +1,7 @@
 		<!-- navbar -->
 		<div class="navbar">
 			<div class="logo_div">
-				<a href="index.php">
+				<a href="<?php echo BASE_URL . 'index.php'; ?>">
 					<h1>
 						<?php echo $text_cms_name; ?>
 					</h1>
