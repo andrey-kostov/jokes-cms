@@ -9,6 +9,7 @@ mysqli_query -
 mysqli_fetch_all - 
 mysqli_fetch_assoc - 
 mysqli_real_escape_string - 
+mysqli_num_rows - 
 md5 - 
 
 in_array -
@@ -19,3 +20,6 @@ trim -
 session_start -
 session_unset -
 session_destroy -
+strtolower - 
+
+preg_replace - 

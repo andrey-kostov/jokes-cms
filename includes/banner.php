@@ -17,7 +17,7 @@
 			<a href="register.php" class="btn">Join us!</a>
 		</div>
 
-		<div class="login_div">
+		<!-- <div class="login_div">
 			<form action="<?php echo BASE_URL . 'index.php'; ?>" method="post" >
 				<h2>Login</h2>
 				<div style="width: 60%; margin: 0px auto;">
@@ -27,6 +27,6 @@
 				<input type="password" name="password"  placeholder="Password"> 
 				<button class="btn" type="submit" name="login_btn">Sign in</button>
 			</form>
-		</div>
+		</div> -->
 	</div>
 <?php } ?>

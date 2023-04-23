@@ -13,16 +13,23 @@
 					<?php echo $text_navbar_link_1; ?>
 			  	</a>
 			</li>
-			<li>
-				<a href="<?php echo BASE_URL . 'register.php'?>">
-					<?php echo $text_navbar_link_5; ?>
-			  	</a>
-			</li>
-			<li>
-				<a href="#news">
-					<?php echo $text_navbar_link_2; ?>
-			  	</a>
-			</li>
+			<?php if (isset($_SESSION)) { ?>
+				<li>
+					<a href="<?php echo BASE_URL . 'register.php'?>">
+						<?php echo $text_navbar_link_5; ?>
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo BASE_URL . 'login.php'?>">
+						<?php echo $text_navbar_link_6; ?>
+					</a>
+				</li>
+			<?php } else{ ?>
+				<li>
+						<?php echo $_SESSION['user']['username']; ?>
+				</li>
+			<?php } ?>
+			
 			<li>
 				<a href="#contact">
 					<?php echo $text_navbar_link_3; ?>
